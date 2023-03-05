@@ -63,8 +63,8 @@
 
      // unnamed namespace
      namespace {
-      int my_variable;
-      void my_function();
+       int my_variable;
+       void my_function();
      }
      ```
 
