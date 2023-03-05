@@ -4,8 +4,8 @@
 - 1 mark per qn
 
 ## Questions:
-
-1. Interpreting & explaining exception handling code (syntax, output, flow of control)
+ 
+### 1. Interpreting & explaining exception handling code (syntax, output, flow of control)
 
    - try: The try block is used to enclose the code that may potentially throw an exception.
    - catch: If an exception is thrown, the catch block is executed to handle the exception.
