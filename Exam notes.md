@@ -33,11 +33,11 @@
      }
      ```
 
-2. Concepts behind exception handling
+### 2. Concepts behind exception handling
 
    - The basic concept of exception handling is to separate the error handling code from the normal flow of the program.
 
-3. Namespace ('using', scope, unnamed, nested, etc)
+### 3. Namespace ('using', scope, unnamed, nested, etc)
 
    - Namespace allows you to group related identifiers (such as variables, functions, and classes) together under a single name.
    - Scope refers to the region of a program where a particular variable/function or object can be accessed.
@@ -67,7 +67,7 @@
      }
      ```
 
-4. Function template, concepts, reasons for it, coding it, using it in declaration (explicit specification of type <>)
+### 4. Function template, concepts, reasons for it, coding it, using it in declaration (explicit specification of type <>)
 
    - A generic function that can work with different types of data. It is defined using a template keyword followed by a placeholder for the data type
    - The concept is to have the function work with multiple types of data, without the need for creating separate functions for each data type. This helps to write more concise and reusable code.
@@ -94,12 +94,12 @@
      }
      ```
 
-5. Difference between class vs struct, in terms of variables access:
+### 5. Difference between class vs struct, in terms of variables access:
 
    - The default accessibility in a struct is **public**.
    - The default accessibility in a class is **private**. However, classes have the flexibility to make variables public as well if declared.
 
-6. Friend function, concept, reasons for it, coding it, how it is combined with insertion/extraction operator overloading
+### 6. Friend function, concept, reasons for it, coding it, how it is combined with insertion/extraction operator overloading
 
    - It is a **non-member function** that has access to the private and protected members of a class
    - Useful in situations where a non-member function needs to access private or protected data members of a class.
@@ -160,7 +160,7 @@
 
    - In this example, the insertion and extraction operators are overloaded as friend functions of MyClass. Therefore, they have access to the private member x of MyClass and can output or input its value. In the main function, the object obj is first output using the insertion operator. Then, the value of x is modified by inputting a new value using the extraction operator. Finally, the modified object is output again using the insertion operator.
 
-7. Two different operator overloading ways, as **class member function** vs **friend function**, how to interpret, ways to overload binary operators, ways to invoke operators, how to code
+### 7. Two different operator overloading ways, as **class member function** vs **friend function**, how to interpret, ways to overload binary operators, ways to invoke operators, how to code
 
    - Overloading as a **Class Member Function**:
 
@@ -204,7 +204,7 @@
      result = obj1 + obj2;
      ```
 
-8. Difference btw acccess modifiers (public/ protected/ private) and its meaning when
+### 8. Difference btw acccess modifiers (public/ protected/ private) and its meaning when
 
    1. Used within a class declaration:
 
@@ -220,7 +220,7 @@
       - Protected inheritance: The public and protected members of the base class become protected members of the derived class, and the private members of the base class are not accessible in the derived class.
       - Private inheritance: The public and protected members of the base class become private members of the derived class, and the private members of the base class are not accessible in the derived class.
 
-9. Difference betw class constructors VS destructors in terms of concepts, when it is being used and how it is declared
+### 9. Difference betw class constructors VS destructors in terms of concepts, when it is being used and how it is declared
 
    - Constructors are used to initialize objects of a class, while destructors are used to destroy them.
    - Destructors are distinguished by the tilde operator (~).
@@ -256,7 +256,7 @@
      }
      ```
 
-10. Difference betw 2 ways in which 'virtual' keyword is used
+### 10. Difference betw 2 ways in which 'virtual' keyword is used
 
     - To declare virtual/pure virutal functions
 
@@ -308,7 +308,7 @@
 
       - In this example, B and C both inherit from A as a virtual base class, and D inherits from both B and C. This ensures that there is only one instance of A in the inheritance hierarchy, and that `x` is unambiguous in D.
 
-11. Valid ways to declare iterators for a container like vector (eg. const, non-const, foward, reverse)
+### 11. Valid ways to declare iterators for a container like vector (eg. const, non-const, foward, reverse)
 
     - Const and non-const iterators
 
@@ -361,7 +361,7 @@
         }
         ```
 
-12. List major components of STL (e.g containers, generic algorithms adapter, etc) and briefly explain its purpose
+### 12. List major components of STL (e.g containers, generic algorithms adapter, etc) and briefly explain its purpose
 
     - CONTAINERS
       A container is a holder object that stores a collection of other objects. It manages the storage space for its elements and provides member funcitons to access them, either directly or through iterators
@@ -381,7 +381,7 @@
     - ALLOCATORS
       They are objects responsible for encapsulating memory management. It is used when you want to separate allocation and do construction in two steps. It is also used when separate destruction and deallocation is done in two steps. The default allocator simply uses the operators new and delete to obtain and release memory.
 
-13. How to prevent inheritance in C++ 11
+### 13. How to prevent inheritance in C++ 11
 
     - We prevent inheritance by declaring a class as **final**. The final keyword indicates that the class cannot be used as a base class, i.e., it cannot be inherited by other classes.
     - An example:
@@ -396,14 +396,14 @@
       };
       ```
 
-14. Difference betw method overloading VS overridding
+### 14. Difference betw method overloading VS overridding
 
     - The **number** or **types** of parameters may differ in method overloading, but they must be the same for method overriding.
     - Method overriding can only happen when the base class has the function declared as **virtual**, only then can the derived class override the function. But method overloading does not require any specific keywords.
     - Method overriding is accomplished during **run-time** and method overloading is accomplished during **compile-time**.
     - The destructor for a class cannot be overloaded in any way, neither through method overloading nor method overriding.
 
-15. Meaning of * and -> when used in conjunction with 'this' keyword (eg. (*this).someVariable or this->someVariable or \*this->someVariable , etc)
+### 15. Meaning of * and -> when used in conjunction with 'this' keyword (eg. (*this).someVariable or this->someVariable or \*this->someVariable , etc)
 
     - To access the current object from within a member function, you can use the **this** pointer.
     - For example, suppose you have a class called MyClass with a member variable called myVariable:
@@ -426,7 +426,7 @@
       - When you use this->, you are using the arrow (->) operator to access the member variables and member functions of the current object directly. This is equivalent to using (\*this). to access the member variables and member functions. For example, this->someVariable would access the someVariable member variable of the current object.
       - It is also possible to use *this-> to dereference the this pointer and then access a member variable or member function of the current object using the arrow (->) operator. For example, *this->someVariable would access the value of the someVariable member variable of the current object.
 
-16. What does it mean to have an abstract class, and how to declare it?
+### 16. What does it mean to have an abstract class, and how to declare it?
 
     - An abstract class is a class that cannot be instantiated, meaning you cannot create objects of an abstract class.
     - Contains at least one pure virtual function.
@@ -439,7 +439,7 @@
       };
       ```
 
-17. What does it mean to provide .h and .o file to a "client", and why would we do this? Explain how the .h and .o files are related
+### 17. What does it mean to provide .h and .o file to a "client", and why would we do this? Explain how the .h and .o files are related
 
     - Providing .h and .o files to a client means giving them the header file and compiled object file of a program or library. We do this to allow the client to use the functions and classes defined in the program/library without having access to the source code. The .h file contains function and class declarations, while the .o file contains compiled machine code for those functions and classes. They are related in that the .h file tells the client what functions and classes are available and how to use them, while the .o file provides the actual code to execute those functions and classes.
 
@@ -450,7 +450,7 @@
 
 ## Questions:
 
-1. Writing Declaration & implementation for structs
+### 1. Writing Declaration & implementation for structs
 
    - Struct delcaration ends with a semicolon
    - Example:
@@ -482,7 +482,7 @@
      }
      ```
 
-2. Implementating functions that uses / access
+### 2. Implementating functions that uses / access
 
    - struct variables example:
 
@@ -550,7 +550,7 @@
        }
      ```
 
-3. Exception Handling : basic concepts - Try, Throw, Catch, writing Exception Class, throwing Exception objects, etc
+### 3. Exception Handling : basic concepts - Try, Throw, Catch, writing Exception Class, throwing Exception objects, etc
 
    - Try block: A try block contains the code that may throw an exception. If an exception is thrown in the try block, the program jumps to the corresponding catch block.
    - Throw statement: A throw statement is used to explicitly throw an exception. It can throw an object of any type.
@@ -587,7 +587,7 @@
      }
      ```
 
-4. Operator overloading:
+### 4. Operator overloading:
 
    - A function that overloads =, (), [] or -> for a class must be a member function of this class. (no need use friend)
    - Relatonal (==, <, >, <=, >=, and !=)
@@ -718,7 +718,7 @@
       }
      ```
 
-5. Please refer to all examples with << insertion and >> extraction operators, how it is associated with a class, how it is implemented
+### 5. Please refer to all examples with << insertion and >> extraction operators, how it is associated with a class, how it is implemented
 
    - Example for >>
 
@@ -747,7 +747,7 @@
      }
      ```
 
-6. Writing Declaration & Implementation for classes, in relation to the following concepts:
+### 6. Writing Declaration & Implementation for classes, in relation to the following concepts:
 
    - Encapsulation:
 
@@ -882,13 +882,13 @@
        }
        ```
 
-7. Class template
+### 7. Class template
 
    - how to declare a simple class template
    - writing implementation code for class template
    - (refer to 1st 5-6 slides on 'class templating' lecture notes)
 
-8. How to declare and correctly use
+### 8. How to declare and correctly use
 
    - STL containers (eg. vector)
    - Designed to hold and organize collections of elements
