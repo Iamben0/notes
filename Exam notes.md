@@ -1,24 +1,7 @@
-# Admin stuff
-
-- check gdrive -> under exam on how to fill up the blanks
-- previously, there were qns for drawing, so if there a
-  need to draw, bring ruler
-
-# Exam Admin and Info (a leeeeetle bit)
-
-- refer to the sim connect for the exam schedule
-- exam weightage: 60% of the subject (at least 30%)
-- assignment: 40% of the subject (at least 20%)
-- He discourage PYP, he want us to think differently, some mindset thing
-  (the reasons can see the video, cos it on the slides, so no PYP)
-
 # Part A
 
 - 20 questions
 - 1 mark per qn
-- 1/2 letter (MCQ like!), a few words/sentence/line of code/small function
-- if you know, you know
-- tip: do not spend more than 1 hour on this part
 
 ## Questions:
 
