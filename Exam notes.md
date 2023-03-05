@@ -258,9 +258,8 @@
      ```
 
 ### 10. Difference betw 2 ways in which 'virtual' keyword is used
-
-    - To declare virtual/pure virutal functions
-
+   - To declare virtual/pure virutal functions
+   
       - When a member function is declared as **virtual** in a base class, it can be overridden in a derived class.
       - When a member function is declared as **pure virtual** in a base class, it **must be overridden** in any derived class that is not also an abstract class.
       - Virtual functions allow dynamic binding, which means that the correct function to call is determined at runtime based on the type of the object being pointed to or referenced.
@@ -280,8 +279,8 @@
       };
       ```
 
-    - To prevent "diamond of death" (multiple inheritance)
-
+   - To prevent "diamond of death" (multiple inheritance)
+   
       - It can occur when a class inherits from two or more classes that have a common base class. This can lead to multiple inheritance paths, and if the base class has any non-virtual functions, there can be ambiguity about which implementation to use.
       - To prevent it, you can use the virtual keyword when inheriting from the base class. This creates a "virtual base class", which means that only one instance of the base class is created, even if it appears multiple times in the inheritance hierarchy.
 
@@ -311,13 +310,13 @@
 
 ### 11. Valid ways to declare iterators for a container like vector (eg. const, non-const, foward, reverse)
 
-    - Const and non-const iterators
+   - Const and non-const iterators
 
-      - Vector provides two types of iterators: iterator and const_iterator.
-      - Iterator is used to iterate over a non-const vector, while const_iterator is used to iterate over a const vector.
-      - A regular or non const_iterator points to an element inside the container and **can be used to modify** the element to which it is pointing
-      - A const iterator points to an element of constant type which means the element which is being pointed to by a const_iterator **can’t be modified.**
-      - Example of using iterator and const_iterator to iterate over a non-const/const vector:
+     - Vector provides two types of iterators: iterator and const_iterator.
+     - Iterator is used to iterate over a non-const vector, while const_iterator is used to iterate over a const vector.
+     - A regular or non const_iterator points to an element inside the container and **can be used to modify** the element to which it is pointing
+     - A const iterator points to an element of constant type which means the element which is being pointed to by a const_iterator **can’t be modified.**
+     - Example of using iterator and const_iterator to iterate over a non-const/const vector:
 
         ```
         vector<int> vec = {1, 2, 3, 4};
@@ -332,12 +331,12 @@
         }
         ```
 
-    - Reverse iterators
+   - Reverse iterators
 
-      - Vector also provides two types of iterators for iterating in reverse: reverse_iterator and const_reverse_iterator.
-      - Reverse_iterator is used to iterate over a non-const vector in reverse, while
-      - Const_reverse_iterator is used to iterate over a const vector in reverse.
-      - An example of using a reverse_iterator and const_reverse_iterator to iterate over a non-const/const vector in reverse:
+     - Vector also provides two types of iterators for iterating in reverse: reverse_iterator and const_reverse_iterator.
+     - Reverse_iterator is used to iterate over a non-const vector in reverse, while
+     - Const_reverse_iterator is used to iterate over a const vector in reverse.
+     - An example of using a reverse_iterator and const_reverse_iterator to iterate over a non-const/const vector in reverse:
 
       ```
       vector<int> vec = {1, 2, 3, 4};
@@ -352,9 +351,9 @@
       }
       ```
 
-    - Constness of the container does not affect whether you can use forward or reverse iterators, but it affects whether you can use const or non-const iterators. In general, you should use const iterators whenever possible to avoid unintentionally modifying a container.
+   - Constness of the container does not affect whether you can use forward or reverse iterators, but it affects whether you can use const or non-const iterators. In general, you should use const iterators whenever possible to avoid unintentionally modifying a container.
 
-      - An example of using a const_reverse_iterator to iterate over a const vector in reverse:
+     - An example of using a const_reverse_iterator to iterate over a const vector in reverse:
         ```
         const vector<int> vec = {1, 2, 3, 4};
         for (vector<int>::const_reverse_iterator it = vec.rbegin(); it != vec.rend(); ++it) {
@@ -364,28 +363,28 @@
 
 ### 12. List major components of STL (e.g containers, generic algorithms adapter, etc) and briefly explain its purpose
 
-    - CONTAINERS
+   - CONTAINERS
       A container is a holder object that stores a collection of other objects. It manages the storage space for its elements and provides member funcitons to access them, either directly or through iterators
 
-    - ITERATORS
+   - ITERATORS
       Iterators are used to point at the memory address of STL containers. They are primarily used in sequence of numbers, characters, etc. They reduce the complexity and execution time of program.
 
-    - GENERIC ALGO
+   - GENERIC ALGO
       Algorithm are applied to containers through the iterators that are available to traverse containers. It is a description of a procedure that terminates with a result.
 
-    - FUNCTION OBJECTS
+   - FUNCTION OBJECTS
       Objects that are instances of classes that have an overloaded operator(), the functin call operator, are considered to be function objects. it provides two main advantages over a straight function call. The first is that a function object can contain state. The second is that a function object is a type and therefore can be used as a template parameter.
 
-    - ADAPTERS
+   - ADAPTERS
       The adapter acts as a wrapper between two objects. It catches calls for one object and transforms them to format and interface recognizable by the second object.
 
-    - ALLOCATORS
+   - ALLOCATORS
       They are objects responsible for encapsulating memory management. It is used when you want to separate allocation and do construction in two steps. It is also used when separate destruction and deallocation is done in two steps. The default allocator simply uses the operators new and delete to obtain and release memory.
 
 ### 13. How to prevent inheritance in C++ 11
 
-    - We prevent inheritance by declaring a class as **final**. The final keyword indicates that the class cannot be used as a base class, i.e., it cannot be inherited by other classes.
-    - An example:
+   - We prevent inheritance by declaring a class as **final**. The final keyword indicates that the class cannot be used as a base class, i.e., it cannot be inherited by other classes.
+   - An example:
 
       ```
       class Base final {
@@ -399,15 +398,15 @@
 
 ### 14. Difference betw method overloading VS overridding
 
-    - The **number** or **types** of parameters may differ in method overloading, but they must be the same for method overriding.
-    - Method overriding can only happen when the base class has the function declared as **virtual**, only then can the derived class override the function. But method overloading does not require any specific keywords.
-    - Method overriding is accomplished during **run-time** and method overloading is accomplished during **compile-time**.
-    - The destructor for a class cannot be overloaded in any way, neither through method overloading nor method overriding.
+   - The **number** or **types** of parameters may differ in method overloading, but they must be the same for method overriding.
+   - Method overriding can only happen when the base class has the function declared as **virtual**, only then can the derived class override the function. But method overloading does not require any specific keywords.
+   - Method overriding is accomplished during **run-time** and method overloading is accomplished during **compile-time**.
+   - The destructor for a class cannot be overloaded in any way, neither through method overloading nor method overriding.
 
 ### 15. Meaning of * and -> when used in conjunction with 'this' keyword (eg. (*this).someVariable or this->someVariable or \*this->someVariable , etc)
 
-    - To access the current object from within a member function, you can use the **this** pointer.
-    - For example, suppose you have a class called MyClass with a member variable called myVariable:
+   - To access the current object from within a member function, you can use the **this** pointer.
+   - For example, suppose you have a class called MyClass with a member variable called myVariable:
 
       ```
       class MyClass {
@@ -423,16 +422,16 @@
       };
       ```
 
-      - When you use \*this, you are dereferencing the this pointer, which gives you a reference to the current object. You can then access the member variables and member functions of the object using the dot (.) operator. For example, (\*this).someVariable would access the someVariable member variable of the current object.
-      - When you use this->, you are using the arrow (->) operator to access the member variables and member functions of the current object directly. This is equivalent to using (\*this). to access the member variables and member functions. For example, this->someVariable would access the someVariable member variable of the current object.
-      - It is also possible to use *this-> to dereference the this pointer and then access a member variable or member function of the current object using the arrow (->) operator. For example, *this->someVariable would access the value of the someVariable member variable of the current object.
+   - When you use \*this, you are dereferencing the this pointer, which gives you a reference to the current object. You can then access the member variables and member functions of the object using the dot (.) operator. For example, (\*this).someVariable would access the someVariable member variable of the current object.
+   - When you use this->, you are using the arrow (->) operator to access the member variables and member functions of the current object directly. This is equivalent to using (\*this). to access the member variables and member functions. For example, this->someVariable would access the someVariable member variable of the current object.
+   - It is also possible to use *this-> to dereference the this pointer and then access a member variable or member function of the current object using the arrow (->) operator. For example, *this->someVariable would access the value of the someVariable member variable of the current object.
 
 ### 16. What does it mean to have an abstract class, and how to declare it?
 
-    - An abstract class is a class that cannot be instantiated, meaning you cannot create objects of an abstract class.
-    - Contains at least one pure virtual function.
-    - You declare a pure virtual function by using a pure specifier ( = 0 ) in the declaration of a virtual member function in the class declaration.
-    - Example:
+   - An abstract class is a class that cannot be instantiated, meaning you cannot create objects of an abstract class.
+   - Contains at least one pure virtual function.
+   - You declare a pure virtual function by using a pure specifier ( = 0 ) in the declaration of a virtual member function in the class declaration.
+   - Example:
       ```
       class Shape {
       public:
@@ -442,7 +441,7 @@
 
 ### 17. What does it mean to provide .h and .o file to a "client", and why would we do this? Explain how the .h and .o files are related
 
-    - Providing .h and .o files to a client means giving them the header file and compiled object file of a program or library. We do this to allow the client to use the functions and classes defined in the program/library without having access to the source code. The .h file contains function and class declarations, while the .o file contains compiled machine code for those functions and classes. They are related in that the .h file tells the client what functions and classes are available and how to use them, while the .o file provides the actual code to execute those functions and classes.
+   - Providing .h and .o files to a client means giving them the header file and compiled object file of a program or library. We do this to allow the client to use the functions and classes defined in the program/library without having access to the source code. The .h file contains function and class declarations, while the .o file contains compiled machine code for those functions and classes. They are related in that the .h file tells the client what functions and classes are available and how to use them, while the .o file provides the actual code to execute those functions and classes.
 
 # Part B
 
