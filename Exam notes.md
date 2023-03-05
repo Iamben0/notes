@@ -57,13 +57,14 @@
      // Using 'using' keyword
      using my_namespace::my_variable;
      using my_namespace::my_function;
+     
      int y = my_variable;
      my_function();
 
      // unnamed namespace
      namespace {
-     int my_variable;
-     void my_function();
+      int my_variable;
+      void my_function();
      }
      ```
 
