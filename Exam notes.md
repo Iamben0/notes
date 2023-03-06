@@ -98,7 +98,8 @@
 ### 5. Difference between class vs struct, in terms of variables access:
 
    - The default accessibility in a struct is **public**.
-   - The default accessibility in a class is **private**. However, classes have the flexibility to make variables public as well if declared.
+   - The default accessibility in a class is **private**. 
+   - Both struct and class have the flexibility to make variables public as well if declared.
 
 ### 6. Friend function, concept, reasons for it, coding it, how it is combined with insertion/extraction operator overloading
 
