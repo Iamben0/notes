@@ -13,7 +13,6 @@
    - Example:
 
      ```c++
-     code
      #include <iostream>
      using namespace std;
 
@@ -46,7 +45,6 @@
    - Examples:
 
      ```c++
-     code
      namespace my_namespace {
        int my_variable;
        void my_function();
@@ -78,7 +76,6 @@
    - Examples on explicit and implicit specified in the function call:
 
      ```c++
-     code
      template <typename T>
      T add(T x, T y) {
        return x + y;
@@ -110,7 +107,6 @@
    - Example of using friend keyword:
 
      ```c++
-     code
      class MyClass {
      private:
        int x;
@@ -128,7 +124,6 @@
    - Example of using friend with insertion and extraction operator overloading:
 
      ```c++
-     code
      class MyClass {
      private:
        int x;
@@ -175,7 +170,6 @@
      - Here's an example of overloading the "+" operator as a class member function:
 
        ```c++
-       code
        class MyClass {
        public:
          int num;
@@ -193,7 +187,6 @@
      - Here's an example of overloading the "+" operator as a friend function:
 
        ```c++
-       code
        class MyClass {
        private:
          int num;
@@ -212,7 +205,6 @@
    - Invoking operators:
 
      ```c++
-     code
      MyClass obj1, obj2, result;
      result = obj1 + obj2;
      ```
@@ -244,7 +236,6 @@
    - A class can have multiple constructors, but only one destructor.
 
      ```c++
-     code
      class MyClass {
      public:
        MyClass();         // default constructor
@@ -279,7 +270,6 @@
       - Pure virtual functions are declared using the = 0 syntax and have no implementation in the base class.
 
       ```c++
-      code
       class Shape {
       public:
           virtual void draw() = 0;  // pure virtual function
@@ -299,7 +289,6 @@
       - To prevent it, you can use the virtual keyword when inheriting from the base class. This creates a "virtual base class", which means that only one instance of the base class is created, even if it appears multiple times in the inheritance hierarchy.
 
       ```c++
-      code
       class A {
       public:
         int x;
@@ -334,7 +323,6 @@
      - Example of using iterator and const_iterator to iterate over a non-const/const vector:
 
         ```c++
-        code
         vector<int> vec = {1, 2, 3, 4};
         for (vector<int>::iterator it = vec.begin(); it != vec.end(); ++it) {
           *it += 1;              // Able to update elements of vector
@@ -355,7 +343,6 @@
      - An example of using a reverse_iterator and const_reverse_iterator to iterate over a non-const/const vector in reverse:
 
       ```c++
-      code
       vector<int> vec = {1, 2, 3, 4};
       for (vector<int>::reverse_iterator it = vec.rbegin(); it != vec.rend(); ++it) {
         *it += 1;              // Able to update elements of vector
@@ -372,7 +359,6 @@
 
      - An example of using a const_reverse_iterator to iterate over a const vector in reverse:
         ```c++
-        code
         const vector<int> vec = {1, 2, 3, 4};
         for (vector<int>::const_reverse_iterator it = vec.rbegin(); it != vec.rend(); ++it) {
           cout << *it << endl;
@@ -399,7 +385,6 @@
    - An example:
 
       ```c++
-      code
       class Base final {
         // Class implementation here
       };
@@ -421,7 +406,6 @@
    - For example, suppose you have a class called MyClass with a member variable called myVariable:
 
       ```c++
-      code
       class MyClass {
       public:
         void myMethod() {
@@ -447,7 +431,6 @@
    - You declare a pure virtual function by using a pure specifier ( = 0 ) in the declaration of a virtual member function in the class declaration.
    - Example:
       ```c++
-      code
       class Shape {
       public:
         virtual double area() const = 0; // pure virtual function
@@ -471,7 +454,6 @@
    - Example:
 
      ```c++
-     code
      // Struct declaration
      struct Person {
          std::string name;
@@ -503,7 +485,6 @@
    - struct variables example:
 
      ```c++
-     code
      #include <iostream>
      using namespace std;
 
@@ -535,7 +516,6 @@
    - array of struct example:
 
      ```c++
-     code
      #include <iostream>
        using namespace std;
 
@@ -577,7 +557,6 @@
    - Example:
 
      ```c++
-     code
      #include <iostream>
 
      class MyException : public std::exception {
@@ -615,7 +594,6 @@
      - Example using without friend
 
        ```c++
-        code
         class Person {
         private:
             string name;
@@ -646,7 +624,6 @@
      - Example using with friend
 
        ```c++
-       code
        #include <iostream>
        using namespace std;
 
@@ -690,7 +667,6 @@
      - Example
 
        ```c++
-       code
        class MyNumber {
        private:
           int value;
@@ -715,7 +691,6 @@
       - Example using with friend
 
        ```c++
-        code
         #include <iostream>
         using namespace std;
 
@@ -754,7 +729,6 @@
      - Example for <<
 
      ```c++
-      code
       #include <iostream>
       #include <string>
 
@@ -785,7 +759,6 @@
    - Example for >>
 
      ```c++
-     code
      #include <iostream>
      #include <string>
 
@@ -821,7 +794,6 @@
      - Example
 
        ```c++
-        code
         // Point2D.h
 
         #ifndef POINT2D_H
@@ -876,7 +848,6 @@
      - Example
 
      ```c++
-       code
        #ifndef SAVINGS_ACCOUNT_H
        #define SAVINGS_ACCOUNT_H
 
@@ -905,7 +876,6 @@
      - Here is an example of implementing method overriding and dynamic binding in C++:
 
        ```c++
-       code
        class Shape {
        public:
            virtual double getArea() {
@@ -998,7 +968,6 @@
   - Example
 
     ```c++
-    code
     #include <vector>
     using namespace std;
 
@@ -1019,8 +988,8 @@
 
   - The default random engine is a pseudorandom number generator that is part of the C++ standard library
   - Example
-
-    ```
+ 
+    ```c++
     #include <iostream>
     #include <random>
 
