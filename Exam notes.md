@@ -188,14 +188,18 @@
 
        ```
        class MyClass {
-       public:
+       private:
          int num;
-         friend MyClass operator+(const MyClass& lhs, const MyClass& rhs) {
-           MyClass result;
-           result.num = lhs.num + rhs.num;
-           return result;
-         }
+       public:
+         // Declaration of operator+ as a friend function
+         friend MyClass operator+(const MyClass& lhs, const MyClass& rhs);
        };
+       
+       friend MyClass operator+(const MyClass& lhs, const MyClass& rhs) {
+         MyClass result;
+         result.num = lhs.num + rhs.num;
+         return result;
+       }
        ```
 
    - Invoking operators:
