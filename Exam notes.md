@@ -789,7 +789,7 @@
 
      - Process of hiding the implementation details of a class from the outside world and providing a well-defined interface for interacting with the class.
      - File level: using _.h and _.cpp for each class, together with #ifndef, #define, #endif header guards
-       - To prevent multiple inclusion of the same header file, #ifndef, #define, and #endif preprocessor directives are often used to create header guards. These guards ensure that the contents of the header file are only included once in a single translation unit, preventing duplicate symbol definitions and reducing compile time.
+      - To prevent multiple inclusion of the same header file, #ifndef, #define, and #endif preprocessor directives are often used to create header guards. These guards ensure that the contents of the header file are only included once in a single translation unit, preventing duplicate symbol definitions and reducing compile time.
      - Variable level : using private / protected / public when necessary
      - Example
 
@@ -956,11 +956,11 @@
    - Functions that can be used with different types of containers
    - #include &lt;algorithim&gt;
    - Some commonly used generic algorithms in C++ include:
-    - find(): This algorithm is used to find the first occurrence of a value in a container. It returns an iterator to the found element, or an iterator to the end of the container if the value is not found
-    - sort(): This algorithm is used to sort the elements of a container in ascending order. It takes two iterators as arguments, representing the beginning and end of the range to be sorted
-    - reverse(): This algorithm is used to reverse the order of the elements in a container. It takes two iterators as arguments, representing the beginning and end of the range to be reversed
-    - count(): This algorithm is used to count the number of occurrences of a value in a container. It takes two iterators as arguments, representing the beginning and end of the range to be searched
-    - accumulate(): This algorithm is used to compute the sum of the elements in a container. It takes two iterators as arguments, representing the beginning and end of the range to be accumulated, as well as an initial value
+     - find(): This algorithm is used to find the first occurrence of a value in a container. It returns an iterator to the found element, or an iterator to the end of the container if the value is not found
+     - sort(): This algorithm is used to sort the elements of a container in ascending order. It takes two iterators as arguments, representing the beginning and end of the range to be sorted
+     - reverse(): This algorithm is used to reverse the order of the elements in a container. It takes two iterators as arguments, representing the beginning and end of the range to be reversed
+     - count(): This algorithm is used to count the number of occurrences of a value in a container. It takes two iterators as arguments, representing the beginning and end of the range to be searched
+     - accumulate(): This algorithm is used to compute the sum of the elements in a container. It takes two iterators as arguments, representing the beginning and end of the range to be accumulated, as well as an initial value
 
 - Iterators (eg. foward/ reverse iterators for vector)
 
