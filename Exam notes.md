@@ -411,17 +411,18 @@
         void myMethod() {
           int x = (*this).myVariable;
           int y = this->myVariable;
-          int z = *this->myVariable;
+          int z = *this->myVariable2;
         }
 
       private:
         int myVariable;
+        int *myVariable2;
       };
       ```
 
    - When you use \*this, you are dereferencing the this pointer, which gives you a reference to the current object. You can then access the member variables and member functions of the object using the dot (.) operator. For example, (\*this).someVariable would access the someVariable member variable of the current object.
    - When you use this->, you are using the arrow (->) operator to access the member variables and member functions of the current object directly. This is equivalent to using (\*this). to access the member variables and member functions. For example, this->someVariable would access the someVariable member variable of the current object.
-   - It is also possible to use *this-> to dereference the this pointer and then access a member variable or member function of the current object using the arrow (->) operator. For example, *this->someVariable would access the value of the someVariable member variable of the current object.
+   - When you use *this->, it uses the arrow operator -> to access the myVariable2 member variable of the current object pointed to by the this pointer, and then dereferences the pointer using the dereference operator * to get the value it points to. The expression this->myVariable2 returns a pointer to the myVariable2 member variable, which is then dereferenced using * to get the value it points to.
 
 ### 16. What does it mean to have an abstract class, and how to declare it?
 
