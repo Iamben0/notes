@@ -624,6 +624,73 @@
      - Example using with friend
 
        ```
+       #include <iostream>
+       using namespace std;
+
+       class MyClass {
+       private:
+           int value;
+
+       public:
+           MyClass(int v = 0) : value(v) {}
+
+           // Overloaded bool operator using friend function
+           friend bool operator==(const MyClass& left, const MyClass& right);
+
+           void display() {
+               cout << "Value: " << value << endl;
+           }
+       };
+
+       // Friend function definition
+       bool operator==(const MyClass& left, const MyClass& right) {
+           return left.value == right.value;
+       }
+
+       int main() {
+           MyClass a(10), b(20);
+
+           if (a == b) {
+               cout << "a and b are equal." << endl;
+           }
+           else {
+               cout << "a and b are not equal." << endl;
+           }
+
+           return 0;
+       }
+       ```
+
+   - Binary (+, -, \*, /, %, and &)
+
+     - They are used to **perform arithmetic or logical operations** on objects of a class and can be overloaded to define the behavior of the operator for a particular class.
+     - Example
+
+       ```
+       class MyNumber {
+       private:
+          int value;
+       public:
+          MyNumber(int v) : value(v) {}
+          MyNumber operator+(const MyNumber& other) const {
+              return MyNumber(value + other.value);
+          }
+          // other member functions and data members...
+       };
+
+
+        int main() {
+        MyNumber a(5);
+        MyNumber b(10);
+        MyNumber c = a + b; // calls operator+ overload
+        std::cout << c.getValue() << std::endl; // prints 15
+        return 0;
+        }
+
+       ```
+      - Example using with friend
+
+       ```
         #include <iostream>
         using namespace std;
 
@@ -655,35 +722,6 @@
 
             return 0;
         }
-       ```
-
-   - Binary (+, -, \*, /, %, and &)
-
-     - They are used to **perform arithmetic or logical operations** on objects of a class and can be overloaded to define the behavior of the operator for a particular class.
-     - Example
-
-       ```
-       class MyNumber {
-       private:
-          int value;
-       public:
-          MyNumber(int v) : value(v) {}
-          MyNumber operator+(const MyNumber& other) const {
-              return MyNumber(value + other.value);
-          }
-          // other member functions and data members...
-       };
-
-
-        int main() {
-        MyNumber a(5);
-        MyNumber b(10);
-        MyNumber c = a + b; // calls operator+ overload
-        std::cout << c.getValue() << std::endl; // prints 15
-        return 0;
-        }
-
-       ```
 
    - Io operators (<<, >>)
 
