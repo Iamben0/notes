@@ -367,23 +367,17 @@
 
 ### 12. List major components of STL (e.g containers, generic algorithms adapter, etc) and briefly explain its purpose
 
-   - CONTAINERS
-      A container is a holder object that stores a collection of other objects. It manages the storage space for its elements and provides member funcitons to access them, either directly or through iterators
+   - CONTAINERS: A container is a holder object that stores a collection of other objects. It manages the storage space for its elements and provides member funcitons to access them, either directly or through iterators
 
-   - ITERATORS
-      Iterators are used to point at the memory address of STL containers. They are primarily used in sequence of numbers, characters, etc. They reduce the complexity and execution time of program.
+   - ITERATORS : Iterators are used to point at the memory address of STL containers. They are primarily used in sequence of numbers, characters, etc. They reduce the complexity and execution time of program.
 
-   - GENERIC ALGO
-      Algorithm are applied to containers through the iterators that are available to traverse containers. It is a description of a procedure that terminates with a result.
+   - GENERIC ALGO : Algorithm are applied to containers through the iterators that are available to traverse containers. It is a description of a procedure that terminates with a result.
 
-   - FUNCTION OBJECTS
-      Objects that are instances of classes that have an overloaded operator(), the functin call operator, are considered to be function objects. it provides two main advantages over a straight function call. The first is that a function object can contain state. The second is that a function object is a type and therefore can be used as a template parameter.
+   - FUNCTION OBJECTS : Objects that are instances of classes that have an overloaded operator(), the functin call operator, are considered to be function objects. it provides two main advantages over a straight function call. The first is that a function object can contain state. The second is that a function object is a type and therefore can be used as a template parameter.
 
-   - ADAPTERS
-      The adapter acts as a wrapper between two objects. It catches calls for one object and transforms them to format and interface recognizable by the second object.
+   - ADAPTERS : The adapter acts as a wrapper between two objects. It catches calls for one object and transforms them to format and interface recognizable by the second object.
 
-   - ALLOCATORS
-      They are objects responsible for encapsulating memory management. It is used when you want to separate allocation and do construction in two steps. It is also used when separate destruction and deallocation is done in two steps. The default allocator simply uses the operators new and delete to obtain and release memory.
+   - ALLOCATORS : They are objects responsible for encapsulating memory management. It is used when you want to separate allocation and do construction in two steps. It is also used when separate destruction and deallocation is done in two steps. The default allocator simply uses the operators new and delete to obtain and release memory.
 
 ### 13. How to prevent inheritance in C++ 11
 
