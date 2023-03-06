@@ -399,7 +399,6 @@
    - The **number** or **types** of parameters may differ in method overloading, but they must be the same for method overriding.
    - Method overriding can only happen when the base class has the function declared as **virtual**, only then can the derived class override the function. But method overloading does not require any specific keywords.
    - Method overriding is accomplished during **run-time** and method overloading is accomplished during **compile-time**.
-   - The destructor for a class cannot be overloaded in any way, neither through method overloading nor method overriding.
 
 ### 15. Meaning of * and -> when used in conjunction with 'this' keyword (eg. (*this).someVariable or this->someVariable or \*this->someVariable , etc)
 
