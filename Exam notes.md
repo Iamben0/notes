@@ -103,8 +103,7 @@
 
 ### 6. Friend function, concept, reasons for it, coding it, how it is combined with insertion/extraction operator overloading
 
-   - It is a **non-member function** that has access to the private and protected members of a class
-   - Useful in situations where a non-member function needs to access private or protected data members of a class.
+   - Friend is a keyword and is used with **non-member function** to access the private and protected members of a class
    - Example of using friend keyword:
 
      ```
