@@ -925,8 +925,7 @@
    - (refer to 1st 5-6 slides on 'class templating' lecture notes)
 
 ### 8. How to declare and correctly use
-
-   - STL containers (eg. vector)
+  - STL containers (eg. vector)
    - Designed to hold and organize collections of elements
      - #include &lt;vector&gt;
      - #include &lt;deque&gt;
@@ -952,11 +951,11 @@
      - unordered_map: unordered key-value pairs of unique keys
      - unordered_multimap: unordered key-value pairs of non-unique keys
 
-- Generic Algorithim (eg. find)
+  - Generic Algorithim (eg. find)
 
-  - Functions that can be used with different types of containers
-  - #include &lt;algorithim&gt;
-  - Some commonly used generic algorithms in C++ include:
+   - Functions that can be used with different types of containers
+   - #include &lt;algorithim&gt;
+   - Some commonly used generic algorithms in C++ include:
     - find(): This algorithm is used to find the first occurrence of a value in a container. It returns an iterator to the found element, or an iterator to the end of the container if the value is not found
     - sort(): This algorithm is used to sort the elements of a container in ascending order. It takes two iterators as arguments, representing the beginning and end of the range to be sorted
     - reverse(): This algorithm is used to reverse the order of the elements in a container. It takes two iterators as arguments, representing the beginning and end of the range to be reversed
