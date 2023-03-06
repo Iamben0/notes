@@ -12,7 +12,8 @@
    - throw: The throw statement is used to explicitly throw an exception when a problem is detected.
    - Example:
 
-     ```
+     ```c++
+     code
      #include <iostream>
      using namespace std;
 
@@ -44,7 +45,8 @@
    - To use identifiers from a namespace, you can either prefix them with the namespace name and the scope resolution operator ::, or you can bring them into the current scope using the 'using' keyword.
    - Examples:
 
-     ```
+     ```c++
+     code
      namespace my_namespace {
        int my_variable;
        void my_function();
@@ -75,7 +77,8 @@
    - Allows for more flexible and reusable code.
    - Examples on explicit and implicit specified in the function call:
 
-     ```
+     ```c++
+     code
      template <typename T>
      T add(T x, T y) {
        return x + y;
@@ -106,7 +109,8 @@
    - Friend is a keyword and is used with **non-member function** to access the private and protected members of a class
    - Example of using friend keyword:
 
-     ```
+     ```c++
+     code
      class MyClass {
      private:
        int x;
@@ -123,7 +127,8 @@
 
    - Example of using friend with insertion and extraction operator overloading:
 
-     ```
+     ```c++
+     code
      class MyClass {
      private:
        int x;
@@ -169,7 +174,8 @@
      - The overloaded operator function must consists of the **operator** keyword followed by the **symbol** for the operator being overloaded.
      - Here's an example of overloading the "+" operator as a class member function:
 
-       ```
+       ```c++
+       code
        class MyClass {
        public:
          int num;
@@ -186,7 +192,8 @@
      - We need to define the operator function outside of the class declaration and declare it as a friend of the class. This allows the operator function to access the private members of the class.
      - Here's an example of overloading the "+" operator as a friend function:
 
-       ```
+       ```c++
+       code
        class MyClass {
        private:
          int num;
@@ -204,7 +211,8 @@
 
    - Invoking operators:
 
-     ```
+     ```c++
+     code
      MyClass obj1, obj2, result;
      result = obj1 + obj2;
      ```
@@ -235,7 +243,8 @@
    - Constructors can be overloaded with multiple versions, but destructors cannot.
    - A class can have multiple constructors, but only one destructor.
 
-     ```
+     ```c++
+     code
      class MyClass {
      public:
        MyClass();         // default constructor
@@ -269,7 +278,8 @@
       - Virtual functions allow dynamic binding, which means that the correct function to call is determined at runtime based on the type of the object being pointed to or referenced.
       - Pure virtual functions are declared using the = 0 syntax and have no implementation in the base class.
 
-      ```
+      ```c++
+      code
       class Shape {
       public:
           virtual void draw() = 0;  // pure virtual function
@@ -288,7 +298,8 @@
       - It can occur when a class inherits from two or more classes that have a common base class. This can lead to multiple inheritance paths, and if the base class has any non-virtual functions, there can be ambiguity about which implementation to use.
       - To prevent it, you can use the virtual keyword when inheriting from the base class. This creates a "virtual base class", which means that only one instance of the base class is created, even if it appears multiple times in the inheritance hierarchy.
 
-      ```
+      ```c++
+      code
       class A {
       public:
         int x;
@@ -322,7 +333,8 @@
      - A const iterator points to an element of constant type which means the element which is being pointed to by a const_iterator **can’t be modified.**
      - Example of using iterator and const_iterator to iterate over a non-const/const vector:
 
-        ```
+        ```c++
+        code
         vector<int> vec = {1, 2, 3, 4};
         for (vector<int>::iterator it = vec.begin(); it != vec.end(); ++it) {
           *it += 1;              // Able to update elements of vector
@@ -342,7 +354,8 @@
      - Const_reverse_iterator is used to iterate over a const vector in reverse.
      - An example of using a reverse_iterator and const_reverse_iterator to iterate over a non-const/const vector in reverse:
 
-      ```
+      ```c++
+      code
       vector<int> vec = {1, 2, 3, 4};
       for (vector<int>::reverse_iterator it = vec.rbegin(); it != vec.rend(); ++it) {
         *it += 1;              // Able to update elements of vector
@@ -358,7 +371,8 @@
    - Constness of the container does not affect whether you can use forward or reverse iterators, but it affects whether you can use const or non-const iterators. In general, you should use const iterators whenever possible to avoid unintentionally modifying a container.
 
      - An example of using a const_reverse_iterator to iterate over a const vector in reverse:
-        ```
+        ```c++
+        code
         const vector<int> vec = {1, 2, 3, 4};
         for (vector<int>::const_reverse_iterator it = vec.rbegin(); it != vec.rend(); ++it) {
           cout << *it << endl;
@@ -384,7 +398,8 @@
    - We prevent inheritance by declaring a class as **final**. The final keyword indicates that the class cannot be used as a base class, i.e., it cannot be inherited by other classes.
    - An example:
 
-      ```
+      ```c++
+      code
       class Base final {
         // Class implementation here
       };
@@ -405,7 +420,8 @@
    - To access the current object from within a member function, you can use the **this** pointer.
    - For example, suppose you have a class called MyClass with a member variable called myVariable:
 
-      ```
+      ```c++
+      code
       class MyClass {
       public:
         void myMethod() {
@@ -430,7 +446,8 @@
    - Contains at least one pure virtual function.
    - You declare a pure virtual function by using a pure specifier ( = 0 ) in the declaration of a virtual member function in the class declaration.
    - Example:
-      ```
+      ```c++
+      code
       class Shape {
       public:
         virtual double area() const = 0; // pure virtual function
@@ -453,7 +470,8 @@
    - Struct delcaration ends with a semicolon
    - Example:
 
-     ```
+     ```c++
+     code
      // Struct declaration
      struct Person {
          std::string name;
@@ -484,7 +502,8 @@
 
    - struct variables example:
 
-     ```
+     ```c++
+     code
      #include <iostream>
      using namespace std;
 
@@ -515,7 +534,8 @@
 
    - array of struct example:
 
-     ```
+     ```c++
+     code
      #include <iostream>
        using namespace std;
 
@@ -556,7 +576,8 @@
    - Exception class: An exception class is a user-defined class that represents an exception. It can be thrown as an object of that class.
    - Example:
 
-     ```
+     ```c++
+     code
      #include <iostream>
 
      class MyException : public std::exception {
@@ -593,7 +614,8 @@
      - They are used to **compare** objects of a class and can be overloaded to define the meaning of comparison for a particular class.
      - Example using without friend
 
-       ```
+       ```c++
+        code
         class Person {
         private:
             string name;
@@ -623,7 +645,8 @@
 
      - Example using with friend
 
-       ```
+       ```c++
+       code
        #include <iostream>
        using namespace std;
 
@@ -666,7 +689,8 @@
      - They are used to **perform arithmetic or logical operations** on objects of a class and can be overloaded to define the behavior of the operator for a particular class.
      - Example
 
-       ```
+       ```c++
+       code
        class MyNumber {
        private:
           int value;
@@ -690,7 +714,8 @@
        ```
       - Example using with friend
 
-       ```
+       ```c++
+        code
         #include <iostream>
         using namespace std;
 
@@ -728,7 +753,8 @@
      - They are used to **perform input/output operations** on objects of a class and can be overloaded to define how the object should be represented when printed to the console or read from input.
      - Example for <<
 
-     ```
+     ```c++
+      code
       #include <iostream>
       #include <string>
 
@@ -758,7 +784,8 @@
 
    - Example for >>
 
-     ```
+     ```c++
+     code
      #include <iostream>
      #include <string>
 
@@ -793,7 +820,8 @@
      - Variable level : using private / protected / public when necessary
      - Example
 
-       ```
+       ```c++
+        code
         // Point2D.h
 
         #ifndef POINT2D_H
@@ -847,8 +875,9 @@
      - how to specify super-sub classes, what files to #include
      - Example
 
-     ```
-        #ifndef SAVINGS_ACCOUNT_H
+     ```c++
+       code
+       #ifndef SAVINGS_ACCOUNT_H
        #define SAVINGS_ACCOUNT_H
 
        #include "BankAccount.h"
@@ -875,7 +904,8 @@
      - When a pointer to a base class is used to access a derived class object, the correct virtual function is called based on the actual type of the object, rather than the type of the pointer. This is known as **dynamic binding**, as the function call is determined at **runtime**, whereas **static binding** is determined at **compiled time**.
      - Here is an example of implementing method overriding and dynamic binding in C++:
 
-       ```
+       ```c++
+       code
        class Shape {
        public:
            virtual double getArea() {
@@ -967,7 +997,8 @@
   - Iterators are objects that are used to traverse and access the elements of a container
   - Example
 
-    ```
+    ```c++
+    code
     #include <vector>
     using namespace std;
 
